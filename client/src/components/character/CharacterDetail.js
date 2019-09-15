@@ -8,11 +8,11 @@ import notFoundImage from '../../images/not_found.png';
 
 const useStyles = makeStyles({
     card: {
-        width: '60vw',
+        width: '80vw',
         minHeight: '500px'
     },
     img: {
-        width: '60vw',
+        width: '80vw',
         height: '30vw'
     },
     button: {
