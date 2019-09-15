@@ -1,0 +1,16 @@
+{
+  "name": "beezy-code-tes",
+  "version": "1.0.0",
+  "description": "Beezy coding test",
+  "scripts": {
+    "install": "npm run install:client && npm run install:server",
+    "install:client": "cd client && npm install",
+    "install:server":"cd server && npm install",
+    "start": "cd client && npm run start",
+    "start:prod": "cd server && node .",
+    "build": "cd client && npm run build",
+    "test:client": "cd client && npm test",
+    "test:server": "cd server && npm test"    
+  },
+  "author": "Carlos Aarón Villanueva Roca"
+}

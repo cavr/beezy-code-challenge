@@ -1,0 +1,10 @@
+{
+  "extends": ["standard", "prettier"],
+  "globals": {
+    "describe": true,
+    "expect": true,
+    "beforeEach": true,
+    "it": true,
+    "afterEach": true
+  }
+}
