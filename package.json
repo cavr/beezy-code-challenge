@@ -6,8 +6,8 @@
     "install": "npm run install:client && npm run install:server",
     "install:client": "cd client && npm install",
     "install:server":"cd server && npm install",
-    "start:dev": "cd client && npm run start",
-    "start": "cd server && node .",
+    "start": "cd client && npm run start",
+    "start:prod": "cd server && node .",
     "build": "cd client && npm run build",
     "test:client": "cd client && npm test",
     "test:server": "cd server && npm test"    
