@@ -14,7 +14,7 @@ export const List = ({
     disabled
 }) => {
     return (
-        <Grid container justify="center" style={{ minHeight: '400px' }}>
+        <Grid container justify="center" style={{ minHeight: '500px' }}>
             {data.map(item => (
                 <Component key={item.id} {...item} onClick={onClick} />
             ))}
