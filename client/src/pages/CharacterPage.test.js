@@ -1,13 +1,13 @@
 import React from 'react';
 import { Router } from 'react-router-dom';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { MockedProvider } from '@apollo/react-testing';
-import { ApolloProvider } from '@apollo/react-hooks';
 
 
-import { GET_CHARACTER_QUERY, client } from '../apollo';
+import { GET_CHARACTER_QUERY } from '../apollo';
 import { CharacterPage } from './CharacterPage';
 import { history } from '../history';
+import { act } from 'react-dom/test-utils';
 
 describe('CharacterPage', () => {
     const props = {
@@ -15,15 +15,17 @@ describe('CharacterPage', () => {
     };
 
     test('Render loading OK', async () => {
-        const { container } = render(
-            <ApolloProvider client={client}>
-                <Router history={history}>
-                    <CharacterPage {...props} />
-                </Router>
-            </ApolloProvider>
-        );
-        const circle = container.querySelector('.MuiSkeleton-root');
-        expect(circle).not.toBe(null);
+        await act(async () => {
+            const { container } = render(
+                <MockedProvider mocks={[]} >
+                    <Router history={history}>
+                        <CharacterPage {...props} />
+                    </Router>
+                </MockedProvider>
+            );
+            const circle = container.querySelector('.MuiSkeleton-root');
+            expect(circle).not.toBe(null);
+        });
     });
 
     test('Render error OK', async () => {

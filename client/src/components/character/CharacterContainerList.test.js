@@ -1,10 +1,10 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { MockedProvider } from '@apollo/react-testing';
 
-import { GET_CHARACTERS_QUERY, client } from '../../apollo';
+import { GET_CHARACTERS_QUERY } from '../../apollo';
 import { CharacterContainerList } from './CharacterContainerList';
-import { ApolloProvider } from '@apollo/react-hooks';
+import { act } from 'react-dom/test-utils';
 
 describe('CharacterContainerList', () => {
     const props = {
@@ -13,13 +13,16 @@ describe('CharacterContainerList', () => {
     };
 
     test('Render loading OK', async () => {
-        const { container } = render(
-            <ApolloProvider client={client}>
-                <CharacterContainerList {...props} />
-            </ApolloProvider>
-        );
-        const circle = container.querySelector('circle');
-        expect(circle).not.toBe(null);
+
+        await act(async () => {
+            const { container } = render(
+                <MockedProvider mocks={[]} >
+                    <CharacterContainerList {...props} />
+                </MockedProvider>
+            );
+            const circle = await container.querySelector('circle');
+            expect(circle).not.toBe(null);
+        });
     });
 
     test('Render error OK', async () => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Router } from 'react-router-dom';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { MockedProvider } from '@apollo/react-testing';
-import { ApolloProvider } from '@apollo/react-hooks';
+
 
 import { GET_CHARACTERS_QUERY } from '../apollo';
 import { CharactersPage } from './CharactersPage';
