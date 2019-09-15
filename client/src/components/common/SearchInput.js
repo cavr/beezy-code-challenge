@@ -12,7 +12,11 @@ const useStyles = makeStyles(theme => ({
     root: {
         padding: '2px 4px',
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginBottom: '16px'
+    },
+    box: {
+        width: '100%'
     },
     input: {
         marginLeft: theme.spacing(1),
@@ -47,7 +51,7 @@ export const SearchInput = ({ onSearch, hint = "name", name = hint }) => {
         key === 'Enter' && handleSearch();
     }
     return (
-        <Box margin={4} width={{ xs: '100%' }}>
+        <Box className={classes.box}>
             <Paper className={classes.root}>
                 <InputBase
                     fullWidth

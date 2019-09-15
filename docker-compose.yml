@@ -2,10 +2,10 @@ version: '3.3'
 
 services:
   react-app:
-    container_name: react-apollo
+    container_name: react-apollo-marvel
     build:
       context: .
-      dockerfile: Dockerfile
+      Dockerfile: Dockerfile
     volumes:
       - './:/usr/src/app'     
     ports:

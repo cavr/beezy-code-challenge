@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     },
     img: {
         width: '80vw',
-        height: '30vw'
+        height: '40vw'
     },
     button: {
         marginTop: '8px',
