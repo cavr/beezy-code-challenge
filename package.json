@@ -9,6 +9,7 @@
     "start": "cd client && npm run start",
     "start:prod": "cd server && node .",
     "build": "cd client && npm run build",
+    "test": "npm run test:client && npm run test:server",
     "test:client": "cd client && npm test",
     "test:server": "cd server && npm test"    
   },
