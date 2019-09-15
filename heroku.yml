@@ -1,6 +1,5 @@
 build:
   docker:
     release:
-       dockerfile: Dockerfile
-       target: builder
-    web: Dockerfile
+       dockerfile: dockerfile
+    web: dockerfile
