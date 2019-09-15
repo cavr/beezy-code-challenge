@@ -6,11 +6,14 @@
     "install": "npm run install:client && npm run install:server",
     "install:client": "cd client && npm install",
     "install:server":"cd server && npm install",
-    "start": "cd client && npm run start",
-    "start:prod": "cd server && node .",
+    "start:dev": "cd client && npm run start",
+    "start": "cd server && node .",
     "build": "cd client && npm run build",
     "test:client": "cd client && npm test",
     "test:server": "cd server && npm test"    
   },
-  "author": "Carlos Aarón Villanueva Roca"
+  "author": "Carlos Aarón Villanueva Roca",
+  "engines": {
+    "node": "12.x"
+  }
 }
