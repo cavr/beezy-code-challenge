@@ -51,6 +51,10 @@ As for deployment, I used Heroku since it integrates perfectly with Github and f
 
 You can use docker-compose and run the app with http://localhost:4000
 
+```
+docker-compose up
+```
+
 Or you can run it without docker.
 
 
