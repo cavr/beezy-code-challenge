@@ -16,8 +16,7 @@ const useStyles = makeStyles(theme => ({
         marginRight: theme.spacing(2),
     },
     logo: {
-        left: 'calc(50% - 68px)',
-        position: 'absolute'
+        position: 'relative'
     }
 }));
 

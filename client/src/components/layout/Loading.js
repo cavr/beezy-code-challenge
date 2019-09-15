@@ -11,7 +11,8 @@ export const Loading = () => {
                 position: 'absolute',
                 backgroundColor: 'black',
                 opacity: 0.5,
-                top: 0
+                top: 0,
+                left: 0
             },
             circularProgress: {
                 position: 'fixed',

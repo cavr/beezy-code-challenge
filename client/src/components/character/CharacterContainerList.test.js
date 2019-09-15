@@ -13,7 +13,6 @@ describe('CharacterContainerList', () => {
     };
 
     test('Render loading OK', async () => {
-
         await act(async () => {
             const { container } = render(
                 <MockedProvider mocks={[]} >
