@@ -51,7 +51,7 @@ export const CharacterPreview = ({ id, thumbnail = { value: null }, name, onClic
 }
 
 CharacterPreview.propTypes = {
-    id: PropTypes.string,
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     thumbnail: PropTypes.object,
     name: PropTypes.string,
     onClick: PropTypes.func
