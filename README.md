@@ -40,7 +40,7 @@ As for deployment, I used Heroku since it integrates perfectly with Github and f
 
 * [React](https://reactjs.org)
 * [Graphql](https://graphql.org)
-* [Apollo Client-Apollo Serve](https://www.apollographql.com)
+* [Apollo Client-Apollo Server](https://www.apollographql.com)
 * [Express](https://expressjs.com)
 * [Material UI](https://material-ui.com)
 
