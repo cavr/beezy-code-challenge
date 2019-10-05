@@ -28,6 +28,12 @@ export const useIntersection = ({
         node.current && ref.current && ref.current.observe(node.current);
     }, [action, callback, rootMargin, threshold]);
 
+    useEffect(() => {
+        return (() => {
+            ref.current && ref.current.disconnect();
+        })
+    })
+
     return {
         node,
         observer: ref
