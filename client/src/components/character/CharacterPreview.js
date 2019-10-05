@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Box, Card, Typography, makeStyles } from '@material-ui/core';
 
 import notFoundImage from '../../images/not_found.png';
+import { Image } from '../common';
 
 
 const useStyles = makeStyles(theme => ({
@@ -40,7 +41,7 @@ export const CharacterPreview = ({ id, thumbnail = { value: null }, name, onClic
     }
 
     return <Card data-testid="card" className={classes.card} onClick={handleClick}>
-        <img className={classes.image} onError={addNotFoundSrc} data-testid="img" alt={name} src={thumbnail.value} />
+        <Image className={classes.image} onError={addNotFoundSrc} data-testid="img" alt={name} src={thumbnail.value} />
         <Box  >
             <Typography className={classes.name} gutterBottom variant="body2">
                 {name}

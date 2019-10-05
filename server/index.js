@@ -1,6 +1,11 @@
 const express = require('express');
 const path = require('path');
+const compression = require('compression')
+
 const { app, server } = require('./server');
+
+app.use(compression());
+
 
 server.applyMiddleware({ app });
 

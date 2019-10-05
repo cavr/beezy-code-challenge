@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Beezy coding test server",
   "main": "index.js",
-  "scripts": {    
-    "start": "nodemon",    
+  "scripts": {
+    "start": "nodemon",
     "start:dev": "nodemon ./dev.js",
     "test": "jest"
   },
@@ -12,11 +12,12 @@
   "dependencies": {
     "apollo-server": "^2.6.2",
     "axios": "0.18.1",
+    "compression": "^1.7.4",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
-    "graphql": "^14.3.1"   
+    "graphql": "^14.3.1"
   },
-  "devDependencies": {  
+  "devDependencies": {
     "eslint-config-prettier": "^6.0.0",
     "jest": "^24.8.0",
     "moxios": "^0.4.0",

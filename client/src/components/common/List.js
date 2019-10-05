@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import { Button } from '@material-ui/core';
 import { Loading } from '../layout';
+import { useIntersection } from '../../customHooks';
 
 export const List = ({
     data = [],
@@ -13,6 +14,10 @@ export const List = ({
     loadMore,
     disabled
 }) => {
+
+
+    const { node } = useIntersection({ action: loadMore });
+
     return (
         <Grid container justify="center" style={{ minHeight: '500px' }}>
             {data.map(item => (
@@ -23,6 +28,7 @@ export const List = ({
             {!loading && !data.length && <div>No data</div>}
             {!loading && data.length > 0 && (
                 <Button
+                    ref={node}
                     data-testid="more-button"
                     style={{ marginTop: 16 }}
                     size="medium"
