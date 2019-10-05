@@ -27,7 +27,8 @@ export const FormSelectField = ({
                 onChange={onChange}
                 value={value || ''}
                 SelectDisplayProps={{
-                    'data-testid': 'select'
+                    'data-testid': 'select',
+                    'aria-label': label
                 }}>
                 <MenuItem value="">
                     <em>All</em>
