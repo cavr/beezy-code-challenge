@@ -1,8 +1,23 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, createContext } from 'react';
 import { useLazyQuery, useMutation, useApolloClient, useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
+import { CharacterModal } from '../components/character/CharacterModal';
+import { Button } from '@material-ui/core';
+
+export const TestContext = createContext({});
 
 export const LocalState = props => {
+    const [open, setOpen] = useState({ data: false, arr: [] });
+
+    const toggleModal = () => {
+        setOpen({ ...open, data: !open.data });
+    };
+
+    const addElement = () => {
+        debugger;
+        setOpen({ ...open, arr: [...open.arr, 5] })
+    }
+
     const ref = useRef();
     const clientQuery = gql`
     {
@@ -74,7 +89,7 @@ export const LocalState = props => {
     }, [getData]);
 
     return (
-        <div>
+        <TestContext.Provider value={{ addElement, open: open.data, close: toggleModal }}>
             <pre>{JSON.stringify(data, null, 2)}</pre>
             <pre>{JSON.stringify(response, null, 2)}</pre>
             <h1>User</h1>
@@ -84,6 +99,8 @@ export const LocalState = props => {
             <input type="text" ref={ref}></input>
             <button onClick={handleClick}>Press</button>
             <button onClick={writeData}>Write Data</button>
-        </div>
+            <CharacterModal />
+            <Button color="primary" onClick={toggleModal}>Open</Button>
+        </TestContext.Provider>
     );
 };
