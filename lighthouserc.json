@@ -1,7 +1,10 @@
 {
   "ci": {
     "collect": {
-      "numberOfRuns": 3
+      "numberOfRuns": 3,
+      "settings": {
+			  "chromeFlags": "--disable-gpu --no-sandbox --headless"
+			}
     },
     "assert": {
       "preset": "lighthouse:recommended",
