@@ -2,6 +2,7 @@
   "ci": {
     "collect": {
       "numberOfRuns": 3,
+      "static-dist-dir": "./client/build",
       "settings": {
 			  "chromeFlags": "--disable-gpu --no-sandbox --headless"
 			}
