@@ -16,7 +16,7 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: azure-marvel-last
-        image: cavicavi.azurecr.io/marvelf317:1
+        image: cavicavi.azurecr.io/marvelf317
         resources:
           requests:
             cpu: 100m
